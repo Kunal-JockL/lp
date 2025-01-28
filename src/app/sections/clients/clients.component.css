@@ -1,55 +1,53 @@
 .client-wrapper{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background-color: #000000;
-    overflow: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  overflow: hidden;
 }
 
 .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    width: 70%;
-    margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 70%;
+  margin-top: 10%;
 }
 
 .ourclients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(0, 0, 0);
-    border-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke: 0.1rem GOLD;
-    font-size: 190px;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  color: #00000000;
+  -webkit-text-stroke: 0.1rem GOLD;
+  font-size: 190px;
+  text-align: center;
+  z-index: 999;
 }
 
 .dynamic-image {
-    position: absolute;
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    opacity: 1;
-    pointer-events: none;
-    animation: dropAndFade 2s forwards;
-    z-index: 3 !important;
-  }
+  position: absolute;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+  animation: dropAndFade 2.5s forwards;
+  z-index: 3 !important;
+}
 
-  @keyframes dropAndFade {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(200px); /* How far the image falls */
-      opacity: 0;
-    }
+@keyframes dropAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
+  100% {
+    transform: translateY(250px); /* How far the image falls */
+    opacity: 0;
+  }
+}
