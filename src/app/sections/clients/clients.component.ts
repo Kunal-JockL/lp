@@ -1,4 +1,5 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-clients',
@@ -44,7 +45,7 @@ export class ClientsComponent {
 
     this.currentDelta += Math.sqrt(Math.pow(adjustedX - this.lastX, 2) + Math.pow(adjustedY - this.lastY, 2));
 
-    console.log('Mouse moved on page:', adjustedX, adjustedY);
+    // console.log('Mouse moved on page:', adjustedX, adjustedY);
 
     if (this.currentDelta >= this.maxDelta) {
       this.currentDelta = 0;
@@ -74,4 +75,11 @@ export class ClientsComponent {
     this.lastX = adjustedX;
     this.lastY = adjustedY;
   }
+
+  arrowStyle = {
+    left: '0px',
+    top: '0px',
+    transform: 'rotate(0deg)',
+  };
+
 }
