@@ -81,7 +81,8 @@ export class IntroComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    // console.log('mousemove');
+    if(event.clientY < window.innerHeight) {
+      // console.log('mousemove');
     const cursor = document.querySelector('.cursor') as HTMLElement;
     const div1 = document.querySelector('.div1') as HTMLElement;
 
@@ -125,6 +126,7 @@ export class IntroComponent implements OnInit {
           }
         }, 5);
       }, 100); // Stops increasing size after 200ms of no movement
+    }
     }
   }
 } 

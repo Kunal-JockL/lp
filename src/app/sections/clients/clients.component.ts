@@ -10,8 +10,8 @@ import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 })
 export class ClientsComponent {
   images: string[] = [
-    'lp\public\assets\image1.jpeg',
-    '/assets/image2.jpeg',
+    'assets/image1.jpeg',
+    'assets/image2.jpeg',
     'assets/image3.jpeg',
     'assets/image4.jpeg',
     'assets/image5.jpeg',
@@ -34,15 +34,12 @@ export class ClientsComponent {
       console.log('Mouse moved:', event.clientX, event.clientY);
       const img = document.createElement('img');
       img.src = this.images[Math.floor(Math.random() * this.images.length)];
-      console.log(img.src);
       if (event.clientX < window.innerWidth-150 && event.clientY < window.innerHeight-150) {
       img.className = 'dynamic-image';
-      console.log(img.className);
       img.style.left = `${event.clientX}px`;
-      img.style.top = `${event.clientY}px`;
-
+      img.style.top = `calc(${event.clientY}px + 100vh)`;
       document.body.appendChild(img);
-      console.log('img.width:', img.width);
+      console.log('Image added:', img.src, img.style.left, img.style.top);
       }
 
       // Remove the image after animation ends
