@@ -1,7 +1,19 @@
-<div class="display-wrapper">
+<div class="display-wrapper" (mousemove)="onMouseMove($event)">
     <app-card class="card comp1" [video]="video1" [company]="company1"></app-card>
     <app-card class="card comp2" [video]="video2" [company]="company2"></app-card>
     <app-card class="card comp3" [video]="video3" [company]="company3"></app-card>
     <app-card class="card comp4" [video]="video4" [company]="company4"></app-card>
     <app-card class="card comp5" [video]="video5" [company]="company5"></app-card>
+    <div class="starfield" >
+        @for (star of stars; track star) {
+          <img
+            class="star"
+            [class.grow]="star.glow"
+            [style.left.%]="star.x"
+            [style.top.%]="star.y"
+            [src]="star.src"
+            alt="star"
+          />
+        }
+      </div>
 </div>
