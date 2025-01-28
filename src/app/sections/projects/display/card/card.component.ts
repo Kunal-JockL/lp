@@ -10,6 +10,4 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() video!: string;
   @Input() company!: string;
-  @Input() width!: number;
-  @Input() height!: number;
 }
