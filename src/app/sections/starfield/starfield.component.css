@@ -1,0 +1,18 @@
+.starfield {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255); /* Black background for better visibility */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    width: 20px; /* Adjust as needed */
+    height: 20px;
+    transition: transform 0.2s ease; /* Smooth transition for scaling */
+  }
+  
+  .star.grow {
+    transform: scale(2); /* Increase size by 1.5x */
+  }

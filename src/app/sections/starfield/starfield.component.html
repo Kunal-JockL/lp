@@ -1,0 +1,12 @@
+<div class="starfield" (mousemove)="onMouseMove($event)">
+    @for (star of stars; track star) {
+      <img
+        class="star"
+        [class.grow]="star.glow"
+        [style.left.%]="star.x"
+        [style.top.%]="star.y"
+        [src]="star.src"
+        alt="star"
+      />
+    }
+  </div>
