@@ -1,0 +1,297 @@
+/*navbar*/
+
+/*add the animation in the navbar the one from shift*/
+
+.navbar-wrapper {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    top: 2rem;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1084px;
+    height: 100%;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0ce;
+    border-radius: 50px;
+    padding: 18px;
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    /* margin-left: 10px; */
+    width: auto; /*150px*/
+    height: 90px;
+    cursor: pointer;
+    background-color: transparent;
+    top: 2px;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    background-color: transparent;
+    justify-content: space-around;
+    padding: 0px;
+    flex-basis: auto;
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 0px;
+    align-items: center;
+}
+
+.navlist li {
+    font-family: "Codec Cold Trial ExtraBold";
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #c16632;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact_us {
+    font-family: "Codec Cold Trial ExtraBold";
+    position: relative;
+    background-color: #c16632;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 150px;
+    font-size: 17px;
+    height: 45px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.322);
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.contact_us:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    color: #c16632;
+}
+
+.hamburger {
+    position: relative;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: #c16632;
+    transform-origin: center;
+    transition: transform 0.2s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+#nav-icon3 {
+    width: 30px;
+    height: 27px;
+    position: relative;
+    top: 5px;
+    left: -20px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #c16632;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 8px;
+}
+
+#nav-icon3 span:nth-child(4) {
+    top: 16px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+/* ------------------media quaries---------------- */
+
+@media screen and (min-width: 1020px) {
+    .navlist {
+        position: relative;
+        left: 23px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .navbar {
+        margin: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 3000px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navtop {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navlist li {
+        display: none;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .contact_us {
+        display: none;
+    }
+
+    .hamburger {
+        display: visible;
+    }
+
+    .navbar-wrapper {
+        height: 65px;
+        top: 1.5rem;
+    }
+
+    .navbar {
+        height: 100%;
+    }
+
+    /* ------------------dropdown---------------- */
+
+    :root {
+        --dpLength: 400px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .dropdown-navbar-wrapper {
+        height: var(--dpLength);
+        width: 100%;
+        display: flex;
+    }
+
+    .dropdown-navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-middle {
+        top: calc(-1 * (var(--dpLength) + 10px));
+    }
+
+    .dropdown-logo {
+        top: -2px;
+    }
+
+    .dropdown-navlist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .dropdown-contact_us {
+        display: visible;
+    }
+
+    .dropdown-hamburger {
+        top: -5px;
+    }
+
+    .hover-underline-animation:hover::after {
+        transform: scaleX(0);
+    }
+}

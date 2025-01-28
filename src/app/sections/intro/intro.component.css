@@ -1,0 +1,298 @@
+.intro-parent{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.intro-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: 5% 0 0 0;
+    height: 100%;
+    width: 100%
+}
+
+/* .moto{
+    width: 800px;
+}
+
+.motospan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    color: #ffffff;
+    font-size: 70px;
+}
+
+.motospan{
+    color: white;
+    /* font-family: "Luckiest Guy", cursive;
+    font-size: 180px; 
+    letter-spacing: 10px;
+    text-align: center;
+    text-shadow:  -2px -2px black,
+      -1px -1px black, 1px 1px black, 2px 2px black,
+      3px 3px black, 4px 4px black, 5px 5px black,
+      6px 6px black, 7px 7px black, 8px 8px black,
+      9px 9px black, 10px 10px black, 11px 11px black,
+      12px 12px black, 13px 13px black, 14px 14px black,
+      15px 15px black;
+    width: 100%;
+} */
+
+.moto {
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 30px;
+}
+  
+.motospan {
+    /* text-shadow: 10px 10px 0 rgba(0.5, 0.5, 0.5, 0.4); */
+    padding-bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    color: #ffffff;
+    font-size: 70px;
+    text-shadow:  -2px -2px 0 black,
+      -1px -1px 0 black, 1px 1px 0 black, 2px 2px 0 black,
+      3px 3px 0 black, 4px 4px 0 black, 5px 5px 0 black,
+      6px 6px 0 black, 7px 7px 0 black, 8px 8px 0 black,
+      9px 9px 0 black, 10px 10px 0 black, 11px 11px 0 black,
+      12px 12px 0 black, 13px 13px 0 black, 14px 14px 0 black,
+      15px 15px 0 black;
+}
+
+.contacts{
+    position: relative;
+    display: flex;
+    right: -600px;
+    bottom: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    line-height: 0.8;
+    color: #000000;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.contactsa{
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+}
+  
+
+.back-wrapper{
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+}
+
+.background-container {
+    width: 100%; /* Set width as needed */
+    height: 100%; /* Set height as needed */
+    background-image: url('../../../../public/assets/stary-night.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.inner-moto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    color: #ffffff;
+    gap: 30px;
+}
+
+.inner-motospan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.inner-company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0.8;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.astro-img{
+    position: relative;
+    left: 500px;
+    top: 500px;
+    object-fit: cover;
+}
+
+.astro{
+    width: 200px;
+    height: auto;
+    animation: moveUpDown 3s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0); /* Start position */
+    }
+    50% {
+      transform: translateY(-200px); /* Move up by 20px */
+    }
+    100% {
+      transform: translateY(0); /* Return to start position */
+    }
+  }
+  
+.rocket-img{position: relative;
+    left: -800px;
+    top: 300px;
+    object-fit: cover;
+}
+
+.rocket {
+    position: relative; /* Position it so that it can move freely */
+    width: 200px;
+    height: auto;
+    animation: rocketAnimation 3s infinite; 
+  }
+  
+  @keyframes rocketAnimation {
+    0% {
+      transform: translate(0, 0) rotate(45deg); /* Start at original position, no rotation */
+    }
+    40% {
+      transform: translate(700px, -700px) rotate(45deg); /* Move to 45° top-right, rotate 45° */
+    }
+    50% {
+      transform: translate(700px, -700px) rotate(225deg); /* Flip 180° */
+    }
+    90% {
+      transform: translate(0, 0) rotate(225deg); /* Move back to the original position */
+    }
+    100% {
+      transform: translate(0, 0) rotate(45deg); /* End with the original rotation */
+    }
+  }
+  
+.moon-img{position: relative;
+    left: -100px;
+    top: -350px;
+    object-fit: cover
+}
+
+.moon{
+    position: relative; /* Position it so that it can move freely */
+    width: 200px;
+    height: auto;
+    animation: moonAnimation 3s infinite; 
+}
+  
+  @keyframes moonAnimation {
+    0% {
+      transform: translate(0, 0) rotate(0deg); /* Start at original position, no rotation */
+    }   
+    100% {
+      transform: translate(0, 0) rotate(360deg); /* End with the original rotation */
+    }
+  }
+
+.astro1-img{
+    position: relative;
+    left: 0px;
+    top: -200px;
+    object-fit: cover;
+}
+
+.astro1{
+    width: 200px;
+    height: auto;
+    animation: moveUpDown1 3s infinite ease-in-out;
+}
+
+@keyframes moveUpDown1 {
+    0% {
+        transform: translateY(0) rotate(290deg); /* Start position */
+    }
+    50% {
+        transform: translateY(200px) rotate(250deg); /* Move up by 20px */
+    }
+    100% {
+        transform: translateY(0) rotate(290deg); /* Return to start position */
+    }
+  }
+
+.div1 {
+    z-index: 2;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0) 60px); /* Placeholder mask */
+}
+  
+.div2 {   
+    z-index: 1;
+}
+
+.cursor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+}
